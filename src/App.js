@@ -3,14 +3,23 @@ import './App.css';
 
 class App extends Component {
   state = {
-    name : "Meeses"
+    name : "pavan and gene",
+    age : 29
   }
 
   handleInputChange = (evt) => {
-    evt.preventDefault()
+    evt.preventDefault();
 
     this.setState({
       name : evt.target.value
+    })
+  }
+
+  handleInputChangeForAge = (evt) => {
+    evt.preventDefault();
+
+    this.setState({
+      age : evt.target.value
     })
   }
 
@@ -18,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1>This is App.js</h1>
-        {this.state.name}
+        {this.state.name} | {this.state.age}
         <br /><br />
         {this.state.name.split("").reverse().join("")}
 
@@ -28,9 +37,17 @@ class App extends Component {
         <input type="text"
           onChange={this.handleInputChange}
           value={this.state.name}/>
+
+        <input type="text"
+          onChange={this.handleInputChangeForAge}
+          value={this.state.age}/>
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+

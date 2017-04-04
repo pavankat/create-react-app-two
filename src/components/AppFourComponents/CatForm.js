@@ -4,7 +4,8 @@ const CatForm = (props) => (
   <form onSubmit={props.handleSubmit}>
     <input type="text" 
     onChange={props.handleInputChange}
-    value={props.catName} />
+    value={props.catName}
+    placeholder="insert cat here" />
   </form>)
 
 
