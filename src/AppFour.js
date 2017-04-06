@@ -13,7 +13,8 @@ class AppFour extends Component {
     evt.preventDefault();
 
     let catid = evt.target.getAttribute('data-catid');
-    let robsCats = this.state.robsCats.filter((cat, index) => index != catid); //this does not modify robsCats in the state - it creates a new array of all the cats whose indices are not equal to the catid that was removed
+
+    let robsCats = this.state.robsCats.filter((dog, index) => index != catid); //this does not modify robsCats in the state - it creates a new array of all the cats whose indices are not equal to the catid that was removed
     this.setState({
       robsCats
     }); 
@@ -31,9 +32,9 @@ class AppFour extends Component {
 
   handleSubmit = (evt) => {
     evt.preventDefault();
+
+    let robsCats = [...this.state.robsCats, this.state.catName];
     
-    let robsCats = this.state.robsCats;
-    robsCats.push(this.state.catName);
     let catName = "";
 
     this.setState({

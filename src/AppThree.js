@@ -55,6 +55,10 @@ class AppThree extends Component {
 
         {this.state.name}
 
+        <br />
+
+        {this.state.name.split("").reverse().join("")}
+
         <br /><br />
 
         <p>the current nameChangeCount in state:</p>
